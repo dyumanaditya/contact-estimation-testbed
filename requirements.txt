@@ -1,2 +1,4 @@
 mujoco
 glfw
+matplotlib
+numpy

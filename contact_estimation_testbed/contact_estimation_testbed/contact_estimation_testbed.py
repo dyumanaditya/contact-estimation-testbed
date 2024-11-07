@@ -151,10 +151,10 @@ class ContactEstimationTestbed(Node):
         joint_state_msg.header.stamp = self.get_clock().now().to_msg()
 
         joint_state_msg.name = [mujoco.mj_id2name(self.model, mujoco.mjtObj.mjOBJ_JOINT, i) for i in range(self.model.njnt)]
-        joint_state_msg.position = self.data.qpos[:self.model.njnt]
-        joint_state_msg.velocity = self.data.qvel[:self.model.njnt]
-        joint_state_msg.effort = self.data.qfrc_applied[:self.model.njnt]
-
+        joint_state_msg.position = [float(p) if p is not None else 0.0 for p in self.data.qpos[:self.model.njnt]]
+        joint_state_msg.velocity = [float(v) if v is not None else 0.0 for v in self.data.qvel[:self.model.njnt]]
+        joint_state_msg.effort = [float(e) if e is not None else 0.0 for e in self.data.qfrc_applied[:self.model.njnt]]
+        
         # Publish the JointState message
         self.joint_state_publisher.publish(joint_state_msg)
 
