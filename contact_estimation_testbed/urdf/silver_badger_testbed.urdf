@@ -4,9 +4,17 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <robot name="silver_badger">
-  <mujoco>
+  <mujoco model="silver_badger">
     <compiler balanceinertia="false" discardvisual="false" meshdir="meshes/hb40/"/>
+    <option timestep="0.01" gravity="0 0 -9.81"/>
+
+    
+    <include file="flat_scene.xml"/>
   </mujoco>
+
+
+
+
   <!-- Include gazebo elements and colors-->
   <!-- <xacro:include filename="$(find mab_description)/xacro/gazebo.xacro" />
   <xacro:gazebo_simulation robot="silver_badger"/> -->
