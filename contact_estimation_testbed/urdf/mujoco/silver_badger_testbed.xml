@@ -1,6 +1,6 @@
 <mujoco model="intention">
     <compiler angle="radian" meshdir="../meshes/hb40/" />
-    <option timestep="0.002" gravity="0 0 -9.81"/>
+    <option timestep="0.002" gravity="0 0 0"/>
     <size njmax="500" nconmax="100" />
     <asset>
         <mesh name="body" file="body.stl" scale="0.001 0.001 0.001" />

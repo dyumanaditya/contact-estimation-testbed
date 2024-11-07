@@ -1,0 +1,19 @@
+joints:
+  - fr_j0
+  - fr_j1
+  - fr_j2
+  - fl_j0
+  - fl_j1
+  - fl_j2
+  - rl_j0
+  - rl_j1
+  - rl_j2
+  - rr_j0
+  - rr_j1
+  - rr_j2
+  - sp_j0
+
+plots:
+  - position
+  - velocity
+  - effort
